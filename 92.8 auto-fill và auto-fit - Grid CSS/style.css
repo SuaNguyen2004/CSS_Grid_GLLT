@@ -1,0 +1,21 @@
+/* 14. Grid auto-fill, auto-fit Dùng để xác định cách grid items (phần tử bên trong grid) được tự
+động xếp trong grid container khi không có đủ vị trí (được xác định trước) */
+
+/* beauty CSS */
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: blue;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.container {
+  display: grid;
+  gap: 3px;
+  /* grid-template-columns: repeat(5, 1fr); */
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}

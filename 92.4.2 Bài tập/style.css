@@ -1,0 +1,51 @@
+/* beauty CSS */
+.box1,
+.box4,
+.box5 {
+  background: aqua;
+}
+
+.box2,
+.box3,
+.box6 {
+  background: blue;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  gap: 5px 10px;
+  grid-template-areas:
+    "a a b b b"
+    "a a c c e"
+    "d d c c f";
+}
+
+.box1 {
+  grid-area: a;
+}
+
+.box2 {
+  grid-area: b;
+}
+
+.box3 {
+  grid-area: c;
+}
+
+.box4 {
+  grid-area: d;
+}
+
+.box5 {
+  grid-area: e;
+}
+
+.box6 {
+  grid-area: f;
+}

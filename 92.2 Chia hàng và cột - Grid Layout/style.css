@@ -1,0 +1,81 @@
+/* Cách sử dụng Grid - Grid Container
+2. Cách sử dụng Grid CSS:
+Khi đặt class cha là grid hoặc inline-grid thì tất cả các phần tử rời 
+khỏi luồng thông thường và tuân theo quy tắc lưới của grid */
+
+/* 3. Chia hang va cot trong Grid CSS: */
+
+/* 4. Grid CSS - Gap */
+
+/* 5. Trong trường hợp có nhiều giá trị lặp lại thì dùng repeat: */
+
+/* 6. Chia theo trọng số (Chiếm bao nhiêu phần) */
+
+/* 7. Sử dụng giá trị auto*/
+
+/* 8. Sử dụng giá trị min, max */
+
+/* 9. grid-auto-rows : Chỉ định chiều cao dòng mặc định
+- Tất cả những row không được chỉ rõ chiều cao sẽ tuân theo chiều cao mặc định row này */
+
+.box {
+  /* height: 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box1,
+.box4,
+.box5 {
+  background: aqua;
+}
+
+.box2,
+.box3 {
+  background: blue;
+}
+
+.container {
+  display: grid;
+  /* display: inline-grid; */
+  /* Giá trị mặc định của cột và hàng trong grid */
+  /* grid-template-columns: auto;
+  grid-template-rows: auto; */
+  /* grid-template-columns: 100px calc(100% - 100px) ; */
+  /* grid-template-rows: 50px 100px 50px; */
+
+  /* 4. Gap */
+  /* Quy định gap dòng */
+  /* grid-row-gap: 50px; */
+  /* Quy định gap cột */
+  /* grid-column-gap: 15px; */
+  /* Viết tắt */
+  /* gap: 50px 15px; */
+
+  /* 5. Repeat */
+  /* grid-template-columns: 100px 50px 50px 50px; */
+  /* grid-template-columns: 100px repeat(3, 50px); */
+  /* grid-template-rows: 50px repeat(4, 100px); */
+
+  /*6. Chia theo trọng số */
+  /* grid-template-columns: 1fr 2fr; */
+  /* grid-template-rows: 1fr 2fr 4fr; */
+
+  /* 7. giá trị auto */
+  /* grid-template-columns: 100px auto; */
+  /* Chú ý không áp dụng auto với rows */
+  /* Auto không hoạt động
+  Nó sẽ không cố chiếm 100%
+  chiều cao màn hình như bạn nghĩ
+  Nó sẽ chỉ cố gắng chứa vừa
+  nội dung trong nó */
+  /* grid-template-rows: 50px auto; */
+
+  /* 8. Sử dụng giá trị min, max */
+  grid-template-columns: minmax(150px, 300px) minmax(200px, auto);
+  grid-template-rows: repeat(2, minmax(50px, 80px));
+
+  /* 9. grid-auto-rows */
+  grid-auto-rows: 50px;
+}

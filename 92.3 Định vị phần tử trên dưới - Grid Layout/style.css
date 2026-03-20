@@ -1,0 +1,60 @@
+/* 5. Định vị phần tử với giá trị dương */
+
+/* 6. Định vị phần tử với giá trị âm */
+
+/* 7. Cú pháp viết tắt 1
+- grid-row là viết tắt của grid-row-start và grid-row-end.
+- grid-column là viết tắt của grid-column-start và grid-column-end.
+- Nếu một giá trị được cung cấp, nó sẽ chỉ định grid-row-start / grid-column-start.
+- trước sau / có thể có space hoặc không 
+
+7. Cú pháp viết tắt 2: grid-area
+grid-area là viết tắt của grid-row-start, grid-column-start, grid-row-end và grid-column-end.
+Nếu bốn giá trị được chỉ định,
+
+Span mở rộng thêm bao nhiêu ô từ vị tri hiện tại
+*/
+
+/* beauty CSS */
+.box1, .box4, .box5{
+  background: aqua;
+}
+
+.box2, .box3{
+  background: blue;
+}
+
+.box{
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  gap: 15px;
+  display: grid;
+  grid-template-columns: 100px repeat(2, 50px);
+  grid-template-rows: repeat(7, 50px);
+}
+
+/* .box1{
+  grid-row-start: 1;
+  grid-row-end: -2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.box5{
+  grid-column-start: 2;
+  grid-column-end: 4;
+} */
+
+.box1{
+  grid-row: 1 / -1;
+}
+
+.box2{
+  grid-column: span 2;
+  grid-row: span 3;
+}
